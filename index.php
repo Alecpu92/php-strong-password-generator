@@ -21,6 +21,8 @@
 
 <?php
     $password = $_GET['password'];
+    $contAt = str_contains($mail, 'abcdefghilmnopqrstuvzwyjx')
+    $contDot = str_contains($mail, '0123456789')
     var_dump($password);
 ?>
 
