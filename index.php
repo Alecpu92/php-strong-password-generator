@@ -20,6 +20,10 @@
 </style>
 
 <?php
+    include "function.php";
+?>
+
+<?php
      $lettersMin = range('a' , 'z');
      $lettersCap = range('A' , 'Z');
      $numbers = range(0,9);
@@ -59,12 +63,10 @@ for ($x=0;$x<$lng;$x++) {
         <input type="submit" value="Crea Password">
     </form>
     <h1>
-        Generazione Password  <br/>
-          <pre>
-           <?php
-           var_dump(range('a', 'z'));
-           ?>
-          </pre>
+        Generazione Password: (<?php echo ($res); ?>);
+        <span class= "bg-dark text-light"><?php echo $res; ?></span>
+        <br/>
+        
       </h1>
    </div>
 </body>
