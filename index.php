@@ -8,15 +8,7 @@
 </head>
 
 <style>
-    body{
-        background-color: darkblue;
-    }
-    h1{
-        color: red;
-    }
-    h3{
-        color: white;
-    }
+
 </style>
 
 <?php
