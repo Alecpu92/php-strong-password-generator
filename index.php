@@ -20,20 +20,40 @@
 </style>
 
 <?php
-    $password = $_GET['password'];
-    $contAt = str_contains($mail, 'abcdefghilmnopqrstuvzwyjx')
-    $contDot = str_contains($mail, '0123456789')
-    var_dump($password);
+     $letterMin = range('a' , 'z');
+     $letterCap = range('A' , 'Z');
+     $numbers = range(0,9);
+     $special = [
+        ...range("!" , "/"),
+        ...range(":" , "@"),
+        ...range("[" , "'"),
+        ...range("{" , "-")
+     ]
+
+$lng = $_GET['lenght'];
+
 ?>
 
 
+
+
 <body class="container text-center">
+    <div class="text-center">
     <h1>Strong Password generator</h1>
     <h3>Genera una password sicura</h3>
-    <form class="text-center">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
+    <form class="my-3">
+        <label for="length">Length</label>
+        <input type="number" name="lenght" id="lenght">
         <input type="submit" value="Crea Password">
     </form>
+    <h1>
+        Generazione Password  <br/>
+          <pre>
+           <?php
+           var_dump(range('a', 'z'));
+           ?>
+          </pre>
+      </h1>
+   </div>
 </body>
 </html>
